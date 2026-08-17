@@ -1,0 +1,17 @@
+2026-08-17 12:52:25,551 - ERROR - Tool failed: [WinError 183] Cannot create a file when that file already exists: 'output\\data'
+Traceback (most recent call last):
+  File "D:\Internal_tool\app.py", line 113, in main
+    exporter = ReportExporter()
+  File "D:\Internal_tool\src\exporter.py", line 19, in __init__
+    self.data_folder.mkdir(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        parents=True,
+        ^^^^^^^^^^^^^
+        exist_ok=True
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\pathlib\__init__.py", line 1011, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'output\\data'
